@@ -12,59 +12,81 @@
         android:id="@+id/textView"
         android:layout_width="202dp"
         android:layout_height="37dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
         android:hint="Social Spark App"
         android:textColorHint="#DE6FFB"
         android:textSize="26sp"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <EditText
-        android:id="@+id/txtTimeInput"
-        android:layout_width="156dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColor="#00E676"
-        android:textColorHint="#00E676"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="181dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="240dp"
         android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
         android:text="Morning: 5am - 8am  \nMid-morning: 8am - 12pm  \nAfternoon: 12pm - 5pm  \nEvening: 5pm - 7pm  \nDinner: 7pm - 8pm  \nNight: 8pm - 5am"
         android:textColor="#A2A2A2"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="244dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTimeInput" />
+
+    <EditText
+        android:id="@+id/txtTimeInput"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#00E676"
+        android:textColorHint="#00E676"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvSparkDisplay" />
+
+    <Button
+        android:id="@+id/btnSpark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="19dp"
+        android:text="SPARK UP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="11dp"
+        android:text="Reset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSpark" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="52dp"
         android:hint="Enter the time of day:"
         android:textColorHint="#D500F9"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="194dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSparkDisplay" />
 
     <TextView
         android:id="@+id/tvSparkDisplay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="234dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="44dp"
         android:hint="&quot;Social Spark Here!!&quot;"
         android:textColor="#00E676"
         android:textColorHint="#A2A2A2"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="100dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SPARK UP!!"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="363dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
