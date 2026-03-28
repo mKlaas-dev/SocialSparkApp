@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
                                             tvSparkDisplay.text = night
 
                                         }else{
-
+                                            //if anything alphabetic but not within designated spark suggestion logic fields, user motivated to enter a valid time of day - error handling
                                             tvSparkDisplay.text = "Please enter a valid time of day"
 
                                         }
