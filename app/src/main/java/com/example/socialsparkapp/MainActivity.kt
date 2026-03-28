@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                                         tvSparkDisplay.text = dinner
 
                                     }else{
-
+                                        //statement for night spark
                                         val night = "Leave a thoughtful message ona friends post"
                                         if(time == night){
 
@@ -119,6 +119,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //button to reset all input and output fields
         btnReset.setOnClickListener {
             txtTimeInput.text.clear()
             tvSparkDisplay.text = " "
