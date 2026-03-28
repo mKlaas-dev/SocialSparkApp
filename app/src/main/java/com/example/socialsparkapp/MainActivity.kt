@@ -55,14 +55,14 @@ class MainActivity : AppCompatActivity() {
                     tvSparkDisplay.text = "Please use a-z format"
 
                 }else{
-
+                    //statement for morning spark
                     val morning = "Send a good Morning text to a family member"
                     if(time == morning){
 
                         tvSparkDisplay.text = morning
 
                     }else{
-
+                        //statement for midmorning spark
                         val midmorning = "Reach out to a colleague with a quick Thank you"
                         if(time == midmorning){
 
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                                 tvSparkDisplay.text = afternoon
 
                             }else{
-
+                                //statement for evening spark
                                 val evening = "Send a quick thinking of you message"
                                 if(time == evening){
 
