@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F2F"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="202dp"
+        android:layout_height="37dp"
+        android:hint="Social Spark App"
+        android:textColorHint="#DE6FFB"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/txtTimeInput"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#00E676"
+        android:textColorHint="#00E676"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="181dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="240dp"
+        android:layout_height="110dp"
+        android:text="Morning: 5am - 8am  \nMid-morning: 8am - 12pm  \nAfternoon: 12pm - 5pm  \nEvening: 5pm - 7pm  \nDinner: 7pm - 8pm  \nNight: 8pm - 5am"
+        android:textColor="#A2A2A2"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="244dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter the time of day:"
+        android:textColorHint="#D500F9"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="194dp" />
+
+    <TextView
+        android:id="@+id/tvSparkDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="&quot;Social Spark Here!!&quot;"
+        android:textColor="#00E676"
+        android:textColorHint="#A2A2A2"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPARK UP!!"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="363dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
