@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                                     tvSparkDisplay.text = evening
 
                                 }else{
-
+                                    //statement for dinner spark
                                     val dinner = "Call a relative or friend for a 5-minute catch-up"
                                     if(time == dinner){
 
