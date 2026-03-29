@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var tvSparkDisplay: TextView
 
     val morning = "Send a \"Good morning\" text to a family member"
-    val midmorning = "Reach out to a colleague with a quick \"Thank you\""
+    val midMorning = "Reach out to a colleague with a quick \"Thank you\""
     val afternoon = "Share a funny meme or interesting link with a friend"
     val evening = "Send a quick \"Thinking of you\" message"
     val dinner = "Call a relative or friend for a 5-minute catch-up"
@@ -45,32 +45,48 @@ class MainActivity : AppCompatActivity() {
 
         //button to output suggestion being created with necessary if statements and Spark logic
         btnSpark.setOnClickListener {
+
             val time = txtTimeInput.text.toString()
-            //if the field is left empty, user motivated to enter data - error handling
-            if(time.isEmpty()){
+
+            if(time.isEmpty()){     //if the field is left empty, user motivated to enter data - error handling
+
                 tvSparkDisplay.text = "Please fill field"
-            //if anything not alphabetic is input, user motivated to calibrate field correctly - error handling
-            }else if(!time.all{it.isLetter()}){
+
+            }else if(!time.all{it.isLetter()}){     //if anything not alphabetic is input, user motivated to calibrate field correctly - error handling
+
                     tvSparkDisplay.text = "Please use a-z format"
-                }else if(time.trim().lowercase() == "morning"){
+
+                }else if(time.trim().lowercase() == "morning"){     //statement prompted by "morning" day of time input
+
                         tvSparkDisplay.text = morning
-                    }else if(time.trim().lowercase() == "midmorning"){
-                            tvSparkDisplay.text = midmorning
-                        }else if(time.trim().lowercase() == "afternoon"){
+
+                    }else if(time.trim().lowercase() == "midmorning"){      //statement prompted by "midMorning" day of time input
+
+                            tvSparkDisplay.text = midMorning
+
+                        }else if(time.trim().lowercase() == "afternoon"){       //statement prompted by "afternoon" day of time input
+
                                 tvSparkDisplay.text = afternoon
-                            }else if(time.trim().lowercase() == "evening"){
+
+                            }else if(time.trim().lowercase() == "evening"){     //statement prompted by "evening" day of time input
+
                                     tvSparkDisplay.text = evening
-                                }else if(time.trim().lowercase() == "dinner"){
+
+                                }else if(time.trim().lowercase() == "dinner"){      //statement prompted by "dinner" day of time input
+
                                         tvSparkDisplay.text = dinner
-                                    }else if(time.trim().lowercase() == "night"){
+
+                                    }else if(time.trim().lowercase() == "night"){       //statement prompted by "night" day of time input
+
                                             tvSparkDisplay.text = night
-                //if anything alphabetic but not within designated spark suggestion logic fields, user motivated to enter a valid time of day - error handling
-                                        }else{
+
+                                        }else{      //if anything alphabetic but not within designated spark suggestion logic fields, user motivated to enter a valid time of day - error handling
+
                                             tvSparkDisplay.text = "Please enter a valid time of day"
+
                                         }
+
             }
-
-
 
 
 
@@ -79,7 +95,6 @@ class MainActivity : AppCompatActivity() {
             txtTimeInput.text.clear()
             tvSparkDisplay.text = " "
         }
-
 
 
 
