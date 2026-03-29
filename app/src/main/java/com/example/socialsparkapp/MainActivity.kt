@@ -17,6 +17,13 @@ class MainActivity : AppCompatActivity() {
     lateinit var btnReset: Button
     lateinit var tvSparkDisplay: TextView
 
+    val morning = "Send a \"Good morning\" text to a family member"
+    val midmorning = "Reach out to a colleague with a quick \"Thank you\""
+    val afternoon = "Share a funny meme or interesting link with a friend"
+    val evening = "Send a quick \"Thinking of you\" message"
+    val dinner = "Call a relative or friend for a 5-minute catch-up"
+    val night = "Leave a thoughtful message on a friends post"
+
 
 
 
@@ -38,85 +45,33 @@ class MainActivity : AppCompatActivity() {
 
         //button to output suggestion being created with necessary if statements and Spark logic
         btnSpark.setOnClickListener {
-
             val time = txtTimeInput.text.toString()
-
-
             //if the field is left empty, user motivated to enter data - error handling
             if(time.isEmpty()){
-
                 tvSparkDisplay.text = "Please fill field"
-
-            }else{
-
-                //if anything not alphabetic is input, user motivated to calibrate field correctly - error handling
-                if(time.all{it.isLetter()}){
-
+            //if anything not alphabetic is input, user motivated to calibrate field correctly - error handling
+            }else if(!time.all{it.isLetter()}){
                     tvSparkDisplay.text = "Please use a-z format"
-
-                }else{
-                    //statement for morning spark
-                    val morning = "Send a good Morning text to a family member"
-                    if(time == morning){
-
+                }else if(time.trim().lowercase() == "morning"){
                         tvSparkDisplay.text = morning
-
-                    }else{
-                        //statement for midmorning spark
-                        val midmorning = "Reach out to a colleague with a quick Thank you"
-                        if(time == midmorning){
-
+                    }else if(time.trim().lowercase() == "midmorning"){
                             tvSparkDisplay.text = midmorning
-
-                        }else{
-
-                            val afternoon = "Share a funny meme or interesting link with a friend"
-                            if(time == afternoon){
-
+                        }else if(time.trim().lowercase() == "afternoon"){
                                 tvSparkDisplay.text = afternoon
-
-                            }else{
-                                //statement for evening spark
-                                val evening = "Send a quick thinking of you message"
-                                if(time == evening){
-
+                            }else if(time.trim().lowercase() == "evening"){
                                     tvSparkDisplay.text = evening
-
-                                }else{
-                                    //statement for dinner spark
-                                    val dinner = "Call a relative or friend for a 5-minute catch-up"
-                                    if(time == dinner){
-
+                                }else if(time.trim().lowercase() == "dinner"){
                                         tvSparkDisplay.text = dinner
-
-                                    }else{
-                                        //statement for night spark
-                                        val night = "Leave a thoughtful message ona friends post"
-                                        if(time == night){
-
+                                    }else if(time.trim().lowercase() == "night"){
                                             tvSparkDisplay.text = night
-
+                //if anything alphabetic but not within designated spark suggestion logic fields, user motivated to enter a valid time of day - error handling
                                         }else{
-                                            //if anything alphabetic but not within designated spark suggestion logic fields, user motivated to enter a valid time of day - error handling
                                             tvSparkDisplay.text = "Please enter a valid time of day"
-
                                         }
-
-                                    }
-
-                                }
-
-                            }
-                        }
-
-                    }
-
-                }
-
             }
 
 
-        }
+
 
 
         //button to reset all input and output fields
