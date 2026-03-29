@@ -26,7 +26,7 @@
         android:layout_height="110dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:text="Morning: 5am - 8am  \nMid-morning: 8am - 12pm  \nAfternoon: 12pm - 5pm  \nEvening: 5pm - 7pm  \nDinner: 7pm - 8pm  \nNight: 8pm - 5am"
+        android:text="Morning: 5am - 8am  \nMidMorning: 8am - 12pm  \nAfternoon: 12pm - 5pm  \nEvening: 5pm - 7pm  \nDinner: 7pm - 8pm  \nNight: 8pm - 5am"
         android:textColor="#A2A2A2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTimeInput" />
